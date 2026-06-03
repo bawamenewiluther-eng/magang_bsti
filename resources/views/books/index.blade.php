@@ -4,7 +4,7 @@
 
 <div class="d-flex justify-content-between align-items-center mb-4">
 
-   
+    
 <h2>Data Buku</h2>
 
 <a href="{{ route('books.create') }}"
@@ -13,7 +13,7 @@
     + Tambah Buku
 
 </a>
-   
+    
 
 </div>
 
@@ -21,9 +21,9 @@
 
 <div class="alert alert-success">
 
-   
+    
 {{ session('success') }}
-   
+    
 
 </div>
 
@@ -31,7 +31,7 @@
 
 <div class="card mb-4">
 
-   
+    
 <div class="card-body">
 
     <form method="GET"
@@ -104,16 +104,16 @@
     </form>
 
 </div>
-   
+    
 
 </div>
 
 <div class="mb-3">
 
-   
+    
 <strong>Total Buku:</strong>
 {{ $books->total() }}
-   
+    
 
 </div>
 
@@ -123,7 +123,7 @@
 
 <div class="col-md-3 mb-4">
 
-   
+    
 <div class="card h-100 shadow-sm">
 
     @if($book->cover_image_path)
@@ -176,12 +176,6 @@
 
     <div class="card-footer d-flex gap-2">
 
-        <a href="{{ route('books.show', $book->id) }}"
-           class="btn btn-info btn-sm">
-
-            Detail
-
-        </a>
 
         <a href="{{ route('books.edit', $book->id) }}"
            class="btn btn-warning btn-sm">
@@ -195,6 +189,7 @@
             method="POST">
 
             @csrf
+
             @method('DELETE')
 
             <button
@@ -211,7 +206,7 @@
     </div>
 
 </div>
-   
+    
 
 </div>
 
@@ -219,13 +214,13 @@
 
 <div class="col-12">
 
-   
+    
 <div class="alert alert-warning">
 
     Belum ada data buku.
 
 </div>
-   
+    
 
 </div>
 
@@ -235,9 +230,9 @@
 
 <div class="mt-4">
 
-   
+    
 {{ $books->links() }}
-   
+    
 
 </div>
 

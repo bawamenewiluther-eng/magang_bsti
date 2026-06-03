@@ -57,7 +57,7 @@ if ($request->filled('publication_year')) {
 
 $books = $query
     ->latest()
-    ->paginate(8)
+    ->paginate(10)
     ->withQueryString();
 
 $categories = categories::all();
