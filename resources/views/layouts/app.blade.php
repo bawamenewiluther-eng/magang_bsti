@@ -63,14 +63,6 @@
                     Buku
                 </a>
 
-                <a href="{{ route('categories.index') }}">
-                    Kategori
-                </a>
-
-                <a href="{{ route('authors.index') }}">
-                    Penulis
-                </a>
-
             </div>
 
             <a href="#">
