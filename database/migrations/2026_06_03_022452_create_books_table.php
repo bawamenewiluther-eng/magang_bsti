@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
 
+        Schema::create('books', function (Blueprint $table) {
+
             $table->id();
 
             $table->foreignId('category_id')
@@ -30,6 +32,12 @@ return new class extends Migration
 
             $table->string('cover_image_path')
                 ->nullable();
+
+            $table->timestamp('created_at')->nullable();
+
+            $table->timestamp('updated_at')->nullable();
+
+        });   
 
             $table->timestamps();
 
